@@ -142,4 +142,12 @@ If network retrieval fails, the CLI exits with a fallback hint and does not log 
 - The cited method was evaluated on machine-learning methodology proposals. Its use in other scientific domains is untested by that evaluation.
 - Research runs may contain notes, citations, and intermediate ideas. Add `runs/` to the consuming repository's `.gitignore` if those run artifacts should stay local.
 
+## Acknowledgements
+
+This skill was designed based on the research ideation workflow described in [*IdeaScientist: Orchestrating Agents for Grounded Scientific Ideation*](https://arxiv.org/abs/2610.04074) by Jiarui Liu et al. We thank the authors for the ideas that informed this skill's workflow, especially its combination of same-problem gap finding, cross-field mechanism transfer, and critical review. This repository is an independent skill implementation and is not an official artifact from the paper's authors.
+
+## License
+
+This project is released under the MIT License. See [LICENSE](LICENSE).
+
 See [`SKILL.md`](SKILL.md) for the complete stage instructions, schemas, reading protocol, and delivery checklist. See [`evals/README.md`](evals/README.md) for development-only evaluation procedures; that folder is not part of the runtime skill package.
