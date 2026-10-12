@@ -1,0 +1,22 @@
+# Generated research runs
+/runs/
+
+# Python bytecode and caches
+__pycache__/
+*.py[cod]
+
+# Local Python environments
+/venv/
+/.venv/
+
+# Operating-system files
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Local editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~

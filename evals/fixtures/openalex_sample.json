@@ -1,0 +1,15 @@
+{"meta": {"count": 2},
+ "results": [
+  {"id": "https://openalex.org/W100", "display_name": "Two-Stage Candidate Retrieval for Fast Ranking",
+   "publication_year": 2024, "publication_date": "2024-03-01", "doi": "https://doi.org/10.0000/example.1",
+   "abstract_inverted_index": {"We": [0], "study": [1], "a": [2, 7], "first-stage": [3], "filter": [4], "then": [5], "fine-grained": [6, 8]},
+   "authorships": [{"author": {"display_name": "Ada Example"}}],
+   "primary_topic": {"display_name": "Ranking", "subfield": {"display_name": "Information Systems"}, "field": {"display_name": "Computer Science"}},
+   "cited_by_count": 3},
+  {"id": "https://openalex.org/W200", "display_name": "Budgeted allocation under uncertainty",
+   "publication_year": 2019, "publication_date": "2019-05-05", "doi": null,
+   "abstract_inverted_index": null,
+   "authorships": [],
+   "primary_topic": {"display_name": "Allocation", "subfield": {"display_name": "Management Science and Operations Research"}},
+   "cited_by_count": 40}
+ ]}

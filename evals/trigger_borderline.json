@@ -1,0 +1,17 @@
+[
+ {
+  "query": "What is a good research topic for a first-year PhD student in machine learning?",
+  "should_trigger": null,
+  "note": "no problem or challenge: topic discovery is out of the paper's scope"
+ },
+ {
+  "query": "Design a benchmark dataset for evaluating code LLMs on repository-level tasks.",
+  "should_trigger": null,
+  "note": "benchmark design is out of the paper's scope"
+ },
+ {
+  "query": "What has been done on test-time scaling for code agents, and what is still missing?",
+  "should_trigger": null,
+  "note": "gap-only request: Stages 1-2 only"
+ }
+]

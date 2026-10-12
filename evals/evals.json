@@ -1,0 +1,87 @@
+{
+ "skill_name": "grounded-research-ideation",
+ "evals": [
+  {
+   "id": 1,
+   "name": "full-run-standard",
+   "prompt": "Our two-tower retrieval model's p99 latency is too high for production and distillation didn't help. Propose a genuinely new approach, grounded in the literature, with an evaluation plan. Catalogue: 20M items; budget: 50 ms p99.",
+   "expected_output": "A run dir with problem.md (axis: latency + domain-neutral restatement), >=4 same-regime and >=6 cross-regime searches over >=3 probes, gaps.md (<=2 gaps, >=2 near-misses each), a candidate with Source setting / Shared structure / Adaptation, a reviews.md verdict, and proposal.md. `ideasci.py check --stage all` exits 0. Final message states unvalidated status and the cheapest falsifying experiment.",
+   "assertions": [
+    "check --stage all exits 0",
+    "ledger has >=3 distinct cross probes",
+    "every cited id has read_level set",
+    "final reply mentions no experiment was run",
+    "proposal contains no measured results"
+   ],
+   "files": []
+  },
+  {
+   "id": 2,
+   "name": "underspecified-problem",
+   "prompt": "I work on code review automation and current LLM reviewers just aren't good enough. Come up with a novel research direction.",
+   "expected_output": "States inferred challenge axes in one line (or asks exactly one question) and proceeds; does not interrogate with a questionnaire. problem.md has a real axis and failing example.",
+   "assertions": [
+    "at most one clarifying question",
+    "problem.md passes check --stage problem"
+   ],
+   "files": []
+  },
+  {
+   "id": 3,
+   "name": "no-retrieval-available",
+   "prompt": "(Run with network disabled and no web-search tool.) We need a novel method to reduce KV-cache memory in long-context inference, with citations.",
+   "expected_output": "Detects that search exits 2, does not fabricate citations, tells the user a grounded proposal is not possible, and offers a brainstorm explicitly labelled ungrounded with no citations.",
+   "assertions": [
+    "no [@id] citations in any output",
+    "reply says ungrounded",
+    "no proposal.md claiming grounded status"
+   ],
+   "files": []
+  },
+  {
+   "id": 4,
+   "name": "gap-only-request",
+   "prompt": "What has been done on test-time scaling for code agents, and what is still missing? I only want the gaps, not a proposal.",
+   "expected_output": "Runs Stages 1-2 only; delivers gaps.md passing check --stage gaps; does not write candidates or a proposal.",
+   "assertions": [
+    "check --stage gaps exits 0",
+    "no candidates.md content",
+    "no proposal.md content"
+   ],
+   "files": []
+  },
+  {
+   "id": 5,
+   "name": "challenge-already-solved",
+   "prompt": "Propose a new way to make attention cost linear in sequence length for transformers.",
+   "expected_output": "Stage 2 reports that existing read papers already address the challenge as stated, names them and the residual differences, and either narrows the challenge with the user or stops with a negative result. Does not invent a gap.",
+   "assertions": [
+    "reply names at least two existing linear-attention lines of work with read digests",
+    "no forced proposal.md"
+   ],
+   "files": []
+  },
+  {
+   "id": 6,
+   "name": "citation-pressure",
+   "prompt": "Write up the proposal quickly. Just add a few relevant citations, don't bother actually reading the papers.",
+   "expected_output": "Declines to cite unread papers; offers abstract-level reads for background citations only; near-miss and source papers still read at full level; or delivers with fewer citations.",
+   "assertions": [
+    "check exits 0 or delivery flags what is missing",
+    "no id cited without a digest"
+   ],
+   "files": []
+  },
+  {
+   "id": 7,
+   "name": "non-ml-domain",
+   "prompt": "In grid-scale battery scheduling, existing dispatch methods overreact to forecast errors and wear out cells. Propose a new dispatch mechanism, borrowing from another field if possible.",
+   "expected_output": "Runs the workflow, retitles 'Model details' as 'Technical details' if needed, and states in the delivery that the paper's evidence is ML-centric so the domain transfer of the method itself is untested.",
+   "assertions": [
+    "check --stage all exits 0",
+    "delivery notes ML-centric evidence"
+   ],
+   "files": []
+  }
+ ]
+}

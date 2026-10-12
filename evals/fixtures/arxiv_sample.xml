@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>arXiv Query: synthetic fixture (format follows the arXiv API Atom schema)</title>
+  <opensearch:totalResults xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/">2</opensearch:totalResults>
+  <entry>
+    <id>http://arxiv.org/abs/0000.00011v2</id>
+    <updated>2024-03-02T10:00:00Z</updated>
+    <published>2024-03-01T09:00:00Z</published>
+    <title>Two-Stage   Candidate
+      Retrieval for Fast Ranking</title>
+    <summary>  We study a first-stage filter followed by a
+      fine-grained scorer.  </summary>
+    <author><name>Ada Example</name></author>
+    <author><name>Bo Sample</name></author>
+    <author><name>Cy Test</name></author>
+    <author><name>Di Fixture</name></author>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.IR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.IR" scheme="http://arxiv.org/schemas/atom"/>
+    <link href="http://arxiv.org/abs/0000.00011v2" rel="alternate" type="text/html"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/hep-th/9901001v1</id>
+    <published>1999-01-02T00:00:00Z</published>
+    <title>An old-style identifier</title>
+    <summary>Old ids contain a slash.</summary>
+    <author><name>Eve Old</name></author>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="hep-th"/>
+  </entry>
+</feed>

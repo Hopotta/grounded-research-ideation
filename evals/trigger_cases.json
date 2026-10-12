@@ -1,0 +1,137 @@
+[
+ {
+  "query": "Our two-tower retrieval model's p99 latency is too high for production and distillation didn't help. Propose a genuinely new approach, grounded in the literature, with an evaluation plan.",
+  "should_trigger": true,
+  "note": "explicit problem+challenge, asks for novel method"
+ },
+ {
+  "query": "I'm working on credit assignment for long-horizon LLM agents. PPO with outcome rewards and step-level process reward models both fail under sparse feedback. Come up with a novel research direction, ideally borrowing a mechanism from another field.",
+  "should_trigger": true,
+  "note": "explicit cross-field request"
+ },
+ {
+  "query": "帮我针对“小样本时间序列异常检测误报率高”这个问题，调研现有方法的不足，并提出一个有创新性的研究方案，要有真实文献依据。",
+  "should_trigger": true,
+  "note": "Chinese, gap + proposal + citations"
+ },
+ {
+  "query": "What could we borrow from control theory or operations research to fix instability in off-policy RL? I need a concrete research proposal, not a survey.",
+  "should_trigger": true,
+  "note": "cross-field, proposal not survey"
+ },
+ {
+  "query": "Here is my problem definition and challenge (problem.txt). Generate a research proposal with gap analysis, a cross-domain idea, and falsifiable predictions.",
+  "should_trigger": true,
+  "note": "names the method's artifacts"
+ },
+ {
+  "query": "我们做医学影像分割，标注成本太高，现有半监督方法在小目标上都失效。给我一个新的方法思路，最好能从其他领域借鉴机制。",
+  "should_trigger": true,
+  "note": "Chinese, cross-field"
+ },
+ {
+  "query": "Find the methodological gap in existing privacy-preserving federated learning for recommendation and propose a novel mechanism that addresses it, with citations.",
+  "should_trigger": true,
+  "note": "gap + mechanism"
+ },
+ {
+  "query": "I want something that goes beyond the usual rerank/verify tricks for reducing hallucination in retrieval-augmented generation. Brainstorm a novel method, citing real papers.",
+  "should_trigger": true,
+  "note": "implicit: novelty + grounding"
+ },
+ {
+  "query": "Design a new research direction for cutting memory bandwidth in transformer inference. Look at how other fields solved analogous bottlenecks.",
+  "should_trigger": true,
+  "note": "analogy request"
+ },
+ {
+  "query": "Write a research proposal for my PhD: the challenge is sample inefficiency of RL in sim-to-real robotics; it must be novel relative to the last three years of work.",
+  "should_trigger": true,
+  "note": "novelty vs recent work"
+ },
+ {
+  "query": "帮我构思论文创新点：现有大模型长上下文方法都在做外推或压缩，我想找一个跨学科的新思路。",
+  "should_trigger": true,
+  "note": "Chinese, implicit"
+ },
+ {
+  "query": "We keep hitting rate limits on LLM-judge evaluation. Propose a method to cut evaluation cost without losing agreement with humans, grounded in literature, with an experiment plan.",
+  "should_trigger": true,
+  "note": "problem + challenge, method wanted"
+ },
+ {
+  "query": "Implement the algorithm from arXiv 2503.14476 in PyTorch and add a unit test.",
+  "should_trigger": false,
+  "note": "implementation"
+ },
+ {
+  "query": "Summarize arXiv 2610.04074 in three bullet points.",
+  "should_trigger": false,
+  "note": "paper summary, even of this paper"
+ },
+ {
+  "query": "Why is my training loss NaN after step 300? Here is the traceback.",
+  "should_trigger": false,
+  "note": "debugging"
+ },
+ {
+  "query": "Run the learning-rate ablation sweep and plot the results.",
+  "should_trigger": false,
+  "note": "experiments"
+ },
+ {
+  "query": "Write the related-work section for my diffusion-model paper; here are 30 BibTeX entries.",
+  "should_trigger": false,
+  "note": "writing from given refs"
+ },
+ {
+  "query": "List the 10 most cited papers on graph neural networks since 2020.",
+  "should_trigger": false,
+  "note": "citation lookup"
+ },
+ {
+  "query": "Review my NeurIPS draft and tell me its weaknesses.",
+  "should_trigger": false,
+  "note": "peer review of a draft"
+ },
+ {
+  "query": "Refactor this Python module to use dataclasses.",
+  "should_trigger": false,
+  "note": "plain coding"
+ },
+ {
+  "query": "Reproduce Table 2 from the ResearchAgent paper.",
+  "should_trigger": false,
+  "note": "reproduction"
+ },
+ {
+  "query": "Explain how GRPO differs from PPO.",
+  "should_trigger": false,
+  "note": "explainer"
+ },
+ {
+  "query": "帮我把这篇论文的实验部分翻译成英文并润色。",
+  "should_trigger": false,
+  "note": "translation/polish"
+ },
+ {
+  "query": "This SQL query is slow on 50M rows; make it faster.",
+  "should_trigger": false,
+  "note": "latency challenge but engineering, hard negative"
+ },
+ {
+  "query": "Set up a Slurm job array to run my 50 experiments.",
+  "should_trigger": false,
+  "note": "ops"
+ },
+ {
+  "query": "给我做一个关于扩散模型的文献综述，按时间线整理。",
+  "should_trigger": false,
+  "note": "survey, Chinese"
+ },
+ {
+  "query": "Our API p99 latency is high. Profile the service and find the bottleneck.",
+  "should_trigger": false,
+  "note": "hard negative: performance debugging"
+ }
+]
